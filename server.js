@@ -1,6 +1,5 @@
 require('dotenv').config();
 const express = require('express');
-const crypto = require('crypto');
 
 const app = express();
 const PORT = 3003;
