@@ -16,11 +16,5 @@ COPY . .
 # Expõe a porta que a aplicação usará
 EXPOSE 3003
 
-# Copia o script entrypoint para o container
-# Extremamente necessário para aumentar a seguraça de dados da sua aplicação
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-RUN chmod +x /usr/local/bin/entrypoint.sh
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
-
 # Define o comando padrão de inicialização da aplicação
 CMD ["node", "server.js"]
